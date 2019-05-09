@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+MOTD1=" _    _           _     _______             _______        _     \n"
+MOTD2="| |  | |         | |   |__   __|           |__   __|      | |    \n"
+MOTD3="| |__| | ___  ___| |_     | |_   _  __ _  __ _| | ___  ___| |__  \n"
+MOTD4="|  __  |/ _ \/ __| __|    | | | | |/ _  |/ _  | |/ _ \/ __| |_ \ \n"
+MOTD5="| |  | | (_) \__ \ |_     | | |_| | (_| | (_| | |  __/ (__| | | |\n"
+MOTD6="|_|  |_|\___/|___/\__|    |_|\__,_|\__, |\__,_|_|\___|\___|_| |_|\n"
+MOTD7="                                    __/ |                        \n"
+MOTD8="                                   |___/                         \n"
+MOTD9="\n"
+MOTD10="Welcome!\n"
+MOTD11="\n"
+MOTD12="This server is hosted by Host TugaTech. If you have any questions or need help,\n"
+MOTD13="please don't hesitate to contact us at host@tugatech.com.pt\n"
+
+echo "A aplicar motd no servidor... Por favor, aguarde."
+
+echo "A remover motd antigo, se existente."
+
+rm /etc/motd
+
+echo "A aplicar novo motd"
+
+echo -e "$MOTD1$MOTD2$MOTD3$MOTD4$MOTD5$MOTD6$MOTD7$MOTD8$MOTD9$MOTD10$MOTD11$MOTD12$MOTD13" >> /etc/motd
+
+echo "Concluido. Reinicie o sistema ou efectue o logout do user"
